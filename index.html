@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>JerseyZone - Camisetas Premium de Futebol</title>
+<style>
+  /* Reset básico */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body {
+    background: #0e0a16;
+    color: #eee;
+  }
+  a {
+    color: #9b59b6;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #d46aff;
+  }
+  header {
+    background: #1b1430;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /* Logo */
+  .logo {
+    font-weight: 900;
+    font-size: 28px;
+    color: #9b59b6;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo svg {
+    width: 40px; height: 40px;
+    fill: #d46aff;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  nav ul li {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  nav ul li:hover {
+    color: #d46aff;
+    cursor: pointer;
+  }
+  /* Banner */
+  .banner {
+    background: linear-gradient(90deg, #5e32a4, #8f5bd6);
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .banner h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+  }
+  .banner p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+  }
+  .btn-primary {
+    background: #d46aff;
+    color: #fff;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  .btn-primary:hover {
+    background: #a63eea;
+  }
+  /* Produtos */
+  .products {
+    max-width: 1200px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+    padding: 0 20px;
+  }
+  .product-card {
+    background: #24194c;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px #6f4ce9aa;
+    transition: transform 0.3s ease;
+  }
+  .product-card:hover {
+    transform: translateY(-6px);
+  }
+  .product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+  .product-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #d7b8ff;
+  }
+  .product-card p {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  .price {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #d46aff;
+  }
+  /* Seção como comprar */
+  .how-to-buy {
+    background: #1b1430;
+    color: #ccc;
+    max-width: 900px;
+    margin: 60px auto 40px;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+  }
+  .how-to-buy h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #d46aff;
+  }
+  .how-to-buy p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  .whatsapp-contact {
+    display: inline-block;
+    background: #25d366;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 40px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+  }
+  .whatsapp-contact:hover {
+    background: #128c4a;
+  }
+  /* Rodapé */
+  footer {
+    background: #120e25;
+    padding: 25px 20px;
+    text-align: center;
+    color: #7a6b9f;
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo" aria-label="Logo JerseyZone">
+    <!-- Bola de futebol estilizada em SVG -->
+    <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" >
+      <circle cx="32" cy="32" r="30" stroke="#9b59b6" stroke-width="4" fill="#5a2e91"/>
+      <polygon points="32,8 44,24 40,48 24,48 20,24" fill="#d46aff"/>
+      <circle cx="32" cy="32" r="10" fill="#120e25"/>
+    </svg>
+    JerseyZone
+  </div>
+  <nav>
+    <ul>
+      <li><a href="#produtos">Produtos</a></li>
+      <li><a href="#como-comprar">Como Comprar</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="banner" role="banner">
+  <h1>Camisetas Premium de Futebol</h1>
+  <p>As melhores camisetas tailandesas de times com qualidade superior e design exclusivo.</p>
+  <button class="btn-primary" onclick="document.getElementById('produtos').scrollIntoView({behavior:'smooth'})">Veja nossos produtos</button>
+</section>
+
+<section id="produtos" class="products" aria-label="Lista de produtos">
+  <!-- Produto 1 -->
+  <article class="product-card">
+    <img src="https://i.imgur.com/3YNqW6v.jpg" alt="Camiseta Premium Time A" />
+    <h3>Camiseta Tailândia Time A</h3>
+    <p>Material leve e confortável com tecido respirável para partidas intensas.</p>
+    <div class="price">R$ 249,90</div>
+  </article>
+
+  <!-- Produto 2 -->
+  <article class="product-card">
+    <img src="https://i.imgur.com/Tx0GxP0.jpg" alt="Camiseta Premium Time B" />
+    <h3>Camiseta Tailândia Time B</h3>
+    <p>Design moderno com detalhes exclusivos e costura reforçada.</p>
+    <div class="price">R$ 259,90</div>
+  </article>
+
+  <!-- Produto 3 -->
+  <article class="product-card">
+    <img src="https://i.imgur.com/mvTscCl.jpg" alt="Camiseta Premium Time C" />
+    <h3>Camiseta Tailândia Time C</h3>
+    <p>Perfeita para colecionadores e fãs que buscam autenticidade.</p>
+    <div class="price">R$ 279,90</div>
+  </article>
+</section>
+
+<section id="como-comprar" class="how-to-buy" aria-label="Instruções para compra">
+  <h2>Como Comprar</h2>
+  <p>Escolha suas camisetas favoritas e finalize sua compra com as seguintes opções de pagamento:</p>
+  <ul style="list-style:none; padding-left:0; margin-bottom:15px;">
+    <li>• Pix (pagamento rápido e seguro)</li>
+    <li>• Cartão de crédito ou débito</li>
+    <li>• Atendimento e checkout via WhatsApp para dúvidas e ajuda personalizada</li>
+  </ul>
+  <a href="https://wa.me/5511999999999" target="_blank" rel="noopener" class="whatsapp-contact" aria-label="Contato via WhatsApp">
+    Enviar mensagem no WhatsApp
+  </a>
+</section>
+
+<footer id="contato">
+  JerseyZone &copy; 2025 — Contato: <a href="mailto:contato@jerseyzone.com.br">contato@jerseyzone.com.br</a>
+</footer>
+
+</body>
+</html>
